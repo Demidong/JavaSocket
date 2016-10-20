@@ -1,0 +1,27 @@
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.dx168.bizsocket</groupId>
+    <artifactId>bizsocket-tcp</artifactId>
+    <version>1.0.0-RC6</version>
+    <dependencies>
+        <dependency>
+            <groupId>com.squareup.okio</groupId>
+            <artifactId>okio</artifactId>
+            <version>1.9.0</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.dx168.bizsocket</groupId>
+            <artifactId>bizsocket-logger</artifactId>
+            <version>1.0.0-RC6</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+</project>

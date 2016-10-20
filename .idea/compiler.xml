@@ -19,8 +19,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="javasocket_main" target="1.5" />
-      <module name="javasocket_test" target="1.5" />
+      <module name="javasocket_main" target="1.6" />
+      <module name="javasocket_test" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>
