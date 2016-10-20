@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/JavaSocket.iml" filepath="$PROJECT_DIR$/.idea/JavaSocket.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/javasocket.iml" filepath="$PROJECT_DIR$/.idea/modules/javasocket.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/javasocket_main.iml" filepath="$PROJECT_DIR$/.idea/modules/javasocket_main.iml" group="javasocket" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/javasocket_test.iml" filepath="$PROJECT_DIR$/.idea/modules/javasocket_test.iml" group="javasocket" />
+    </modules>
+  </component>
+</project>
