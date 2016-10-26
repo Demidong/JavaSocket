@@ -3,7 +3,6 @@ package demisocket.tcp;
 
 import com.sun.javafx.tools.packager.Log;
 
-import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.util.concurrent.ArrayBlockingQueue;

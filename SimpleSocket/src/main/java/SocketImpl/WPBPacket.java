@@ -6,7 +6,6 @@ import java.io.ByteArrayOutputStream;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
-import java.nio.charset.Charset;
 import java.util.Map;
 
 /**
@@ -86,10 +85,6 @@ public class WPBPacket extends Packet {
         this.cmd = command;
     }
 
-    @Override
-    public String getDescription() {
-        return null;
-    }
 
     @Override
     public String getPacketID() {

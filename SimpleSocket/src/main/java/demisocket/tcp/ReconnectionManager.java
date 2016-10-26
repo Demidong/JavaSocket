@@ -1,7 +1,8 @@
 package demisocket.tcp;
 
 
-import com.oracle.tools.packager.Log;
+import logger.Logger;
+import logger.LoggerFactory;
 
 /**
  * Handles the automatic reconnection process. Every time a connection is dropped without
@@ -10,7 +11,7 @@ import com.oracle.tools.packager.Log;
  */
 public class ReconnectionManager {
     private int RANDOM_BASE = 5;
-
+    private Logger logger = LoggerFactory.getLogger(ReconnectionManager.class.getSimpleName());
     private SocketConnection connection;
     private ReconnectionManager.ReconnectionThread reconnectionThread;
     private boolean done = false;
@@ -112,7 +113,7 @@ public class ReconnectionManager {
                             reconnectHandler.doReconnect(connection);
                         }
                         else {
-                            Log.debug("connection.connect()  reconnect");
+                            logger.debug("connection.connect()  reconnect");
                             connection.reconnect();
                         }
                     }
@@ -122,7 +123,7 @@ public class ReconnectionManager {
                     }
                 }
 
-                Log.debug("reconnManager shutdown");
+                logger.debug("reconnManager shutdown");
             }
         }
     }
@@ -134,7 +135,7 @@ public class ReconnectionManager {
     private ConnectionListener connectionListener = new ConnectionListener() {
         @Override
         public void connected(SocketConnection connection) {
-            Log.debug("SocketConnection connected");
+            logger.debug("SocketConnection connected");
 
             done = true;
             needRecnect = false;
@@ -145,7 +146,7 @@ public class ReconnectionManager {
 
         @Override
         public void connectionClosed() {
-            Log.debug("SocketConnection connectionClosed");
+            logger.debug("SocketConnection connectionClosed");
 
             done = true;
             needRecnect = false;
@@ -156,15 +157,16 @@ public class ReconnectionManager {
 
         @Override
         public void connectionClosedOnError(Exception exception) {
-            Log.debug("SocketConnection connectionClosedOnError");
+            logger.debug("SocketConnection connectionClosedOnError");
+
             onConnectionClosedOnError(exception);
         }
 
         @Override
         public void reconnectingIn(int time) {
-            Log.debug("SocketConnection reconnectingIn");
+            logger.debug("SocketConnection reconnectingIn");
 
-            Log.debug("reconnectingIn: " + time);
+            logger.debug("reconnectingIn: " + time);
 
         }
     };

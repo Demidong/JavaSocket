@@ -8,7 +8,6 @@ import demisocket.tcp.Packet;
  */
 public abstract class WPBResponseCallback {
 
-
     public abstract void onSucess(Packet packet);
 
 }

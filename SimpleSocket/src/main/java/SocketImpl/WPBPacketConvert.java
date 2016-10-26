@@ -10,6 +10,10 @@ import java.util.HashMap;
 /**
  * Created by demi on 16/10/19.
  */
+
+/**
+ * 对packet数据做处理！
+ */
 public  class WPBPacketConvert {
     private static WPBPacketConvert instance;
     protected ArrayList<SocketBean> beans = new ArrayList<SocketBean>();//存放发出去的packet对应的SocketBean
